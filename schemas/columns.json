@@ -1,0 +1,100 @@
+{
+  "all_contract_columns": [
+    "transaction_id",
+    "transaction_time",
+    "issuer_id",
+    "authorized",
+    "reported",
+    "label_arrival_time",
+    "observed_label",
+    "available_maturity_days",
+    "amount",
+    "merchant_id",
+    "mcc",
+    "country_pair",
+    "channel",
+    "device_risk",
+    "account_age_days",
+    "prior_decline_count",
+    "w1_three_ds_result",
+    "w2_evidence_quality",
+    "reason_code",
+    "representment_outcome",
+    "dispute_filed_time",
+    "dispute_outcome",
+    "charge_off_date",
+    "acquirer_id",
+    "merchant_tenure_days",
+    "merchant_monitoring_flag",
+    "scam_flag",
+    "audit_label",
+    "audit_sample_flag"
+  ],
+  "corrected_label_export_base_columns": [
+    "transaction_id",
+    "fold_id",
+    "e_hat",
+    "r_hat",
+    "p_hat",
+    "q_hat",
+    "str_pseudo_outcome",
+    "fulgor_pseudo_label",
+    "positivity_status"
+  ],
+  "corrected_label_export_range_mode_columns": [
+    "fulgor_pseudo_label_eps_low",
+    "fulgor_pseudo_label_eps_high"
+  ],
+  "derived_columns": [
+    "available_maturity_days"
+  ],
+  "optional_feature_columns": [
+    "amount",
+    "merchant_id",
+    "mcc",
+    "country_pair",
+    "channel",
+    "device_risk",
+    "account_age_days",
+    "prior_decline_count"
+  ],
+  "required_columns": [
+    "transaction_id",
+    "transaction_time",
+    "issuer_id",
+    "authorized",
+    "reported",
+    "label_arrival_time",
+    "observed_label"
+  ],
+  "schema_version": 2,
+  "sidecar_column_denylist": [
+    "e0",
+    "e0_learnable",
+    "eps01_true",
+    "eps10_true",
+    "f0",
+    "lambda_i",
+    "nu_true",
+    "p0",
+    "q0",
+    "r0",
+    "r0_observation",
+    "y_star"
+  ],
+  "stage_history_and_phase2_columns": [
+    "w1_three_ds_result",
+    "w2_evidence_quality",
+    "reason_code",
+    "representment_outcome",
+    "dispute_filed_time",
+    "dispute_outcome",
+    "charge_off_date",
+    "acquirer_id",
+    "merchant_tenure_days",
+    "merchant_monitoring_flag",
+    "scam_flag",
+    "audit_label",
+    "audit_sample_flag"
+  ]
+}

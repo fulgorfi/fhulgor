@@ -1,0 +1,117 @@
+{
+  "column_groups": {
+    "A": [
+      "authorized"
+    ],
+    "R": [
+      "reported"
+    ],
+    "X": [
+      "amount",
+      "mcc",
+      "custom_score"
+    ],
+    "t": [
+      "transaction_time"
+    ],
+    "\u0394": [
+      "available_maturity_days"
+    ],
+    "\u1ef8": [
+      "observed_label"
+    ]
+  },
+  "derived_columns": [
+    "available_maturity_days"
+  ],
+  "errors": [
+    {
+      "code": "missing_required_column",
+      "message": "required contract columns are missing: issuer_id",
+      "row_count": 2,
+      "suggested_fix": null
+    }
+  ],
+  "prerequisites_verdict": {
+    "backtest": {
+      "gold_present": false,
+      "ignorability_inputs_present": false,
+      "lift_status": "exploratory",
+      "message": "2 rows are exploratory-only for backtest lift because validated-lift prerequisites are missing",
+      "missing_conditions": [
+        "gold_evaluation",
+        "ignorability_inputs"
+      ]
+    },
+    "data_sufficiency": {
+      "message": "n*(epsilon, alpha) guidance not computed: no fitted propensity floors or declared pre-run defaults were supplied",
+      "required_rows": null,
+      "status": "not_computed",
+      "usable_rows": 2
+    },
+    "releases": [
+      {
+        "message": "missing required columns",
+        "missing_requirements": [
+          "issuer_id"
+        ],
+        "release": "E1-E4",
+        "status": "unsupported"
+      },
+      {
+        "message": "missing stage-history columns",
+        "missing_requirements": [
+          "issuer_id"
+        ],
+        "release": "E5",
+        "status": "unsupported"
+      },
+      {
+        "message": "missing dispute-game column prerequisites",
+        "missing_requirements": [
+          "issuer_id",
+          "dispute_filed_time",
+          "dispute_outcome or representment_outcome"
+        ],
+        "release": "E6",
+        "status": "unsupported"
+      },
+      {
+        "message": "missing Class 4 column prerequisites",
+        "missing_requirements": [
+          "issuer_id",
+          "merchant_id",
+          "acquirer_id",
+          "merchant_tenure_days",
+          "merchant_monitoring_flag"
+        ],
+        "release": "E7_class4",
+        "status": "unsupported"
+      }
+    ],
+    "supported_engine_releases": []
+  },
+  "row_counts": {
+    "excluded_after_train_end": 0,
+    "excluded_non_monotone": 0,
+    "row_errors": 0,
+    "total": 2,
+    "usable": 2
+  },
+  "schema_version": 2,
+  "valid": false,
+  "warnings": [
+    {
+      "code": "vintage_adequacy_insufficient",
+      "message": "extract spans fewer than four monthly vintage windows for nu_hat",
+      "row_count": 2,
+      "suggested_fix": null
+    },
+    {
+      "code": "ignorability_inputs_missing",
+      "message": "authorization-rule inputs including a schemas-owned live fraud score declaration are absent; backtest lift is exploratory-only",
+      "row_count": 2,
+      "suggested_fix": null
+    }
+  ]
+}

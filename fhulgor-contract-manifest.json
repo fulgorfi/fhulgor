@@ -1,0 +1,176 @@
+{
+  "artifact_hashes": {
+    "docs/data-contract.md": "e4f55e6b0384c023f8c6d7e36826287882de89b7113ff620d13585b478372a02",
+    "fixtures/platform-validation/expected-reports/after_train_end_csv.json": "593c74308c1844a4c488f6735fec47be2a461300d6c133bf8073e38e35d931e9",
+    "fixtures/platform-validation/expected-reports/clean_csv.json": "bf0df32707fe9443bf4eab7ab01c675cb7893e96469ecd0bb2252ce534630aa0",
+    "fixtures/platform-validation/expected-reports/clean_parquet.json": "bf0df32707fe9443bf4eab7ab01c675cb7893e96469ecd0bb2252ce534630aa0",
+    "fixtures/platform-validation/expected-reports/column_limit_metadata_csv.json": "9c2411046e9db1e61aae32a3a794b7874757037aa2f1263d1f6ae4a890bcb0b6",
+    "fixtures/platform-validation/expected-reports/file_size_limit_metadata_csv.json": "257fe984283f0fb814580a21ba7a3283b4e588fb3b773ff85177e051d5514f34",
+    "fixtures/platform-validation/expected-reports/invalid_binary_csv.json": "f2f3c4a967636d1849940e91c20fb4b3a154b176edf3eef144ca9cc8e6634de9",
+    "fixtures/platform-validation/expected-reports/invalid_observed_label_csv.json": "c0a61306883e6de26fdc2a9cbcf9f42967a2486c23301aa88fe62cca02178074",
+    "fixtures/platform-validation/expected-reports/invalid_string_csv.json": "0ae8bb3a6b5cfb1cc1b0dfa9bc5626cffcac5f4572f94683f605ca8cf241a34b",
+    "fixtures/platform-validation/expected-reports/invalid_timestamp_csv.json": "1eb2ebeb8926860803b2d0fa0ed78ec55dfa970477ca5097cb51c071c3af5d82",
+    "fixtures/platform-validation/expected-reports/maturity_inadequate_csv.json": "85f8058de7b98b8fe73a7e10236dd41f51e35abdc5d384826a41df484d8907c1",
+    "fixtures/platform-validation/expected-reports/missing_required_column_csv.json": "5f129f8883ec08767c790e022b8143d6e18e0fb116731b71268ffce742b31d92",
+    "fixtures/platform-validation/expected-reports/non_monotone_csv.json": "bab93a3ad4392ec60d2e8995db45b28095f3927761826c7d40a65e74b98edcac",
+    "fixtures/platform-validation/expected-reports/pan_pattern_csv.json": "de51fd2e6505abbf5769d134b8c5917cb98b2cba7c4c9841ca94d9be661f6f9f",
+    "fixtures/platform-validation/expected-reports/row_limit_metadata_csv.json": "0a9eb2cfe8e494c4d70283b90c5bf9da36fdfd66fbc4cd66a9ce55e3917f08c9",
+    "fixtures/platform-validation/expected-reports/sufficiency_below_guidance_csv.json": "86a4343335c49eb8cd544fe8b006cc73feb2ec2b4d5ee9df0057f00cc0101c62",
+    "fixtures/platform-validation/expected-reports/v1_aliases_csv.json": "13c905c4701a6f90714650258d6e5fdfd245bc4a78c9bf189ef5952a24ce17bb",
+    "fixtures/platform-validation/expected-reports/v1_aliases_parquet.json": "13c905c4701a6f90714650258d6e5fdfd245bc4a78c9bf189ef5952a24ce17bb",
+    "fixtures/platform-validation/expected-reports/vintage_inadequate_csv.json": "fa440e78d672116fccaae9ecd1954a2136b4719ef66eda47f86000a00624c1f9",
+    "fixtures/platform-validation/inputs/after_train_end_csv.csv": "1aeb75cdf08491af87a95fea6a09b0d5f40e7dfadabae93fdbdb73d6a9c26a90",
+    "fixtures/platform-validation/inputs/clean_csv.csv": "2677c1956e15e094ef440c61cff5aa85f4e919dae1e6a8e8281fba2903b092c9",
+    "fixtures/platform-validation/inputs/clean_parquet.parquet": "66e2500db79694526a5c863f2a74cba450e044f8868f741aa8f3000315610e23",
+    "fixtures/platform-validation/inputs/column_limit_metadata_csv.csv": "2677c1956e15e094ef440c61cff5aa85f4e919dae1e6a8e8281fba2903b092c9",
+    "fixtures/platform-validation/inputs/file_size_limit_metadata_csv.csv": "2677c1956e15e094ef440c61cff5aa85f4e919dae1e6a8e8281fba2903b092c9",
+    "fixtures/platform-validation/inputs/invalid_binary_csv.csv": "47d0c60c3c199b8f30d8d86a59dd8b0289801d6e735206d865be65a30670ee32",
+    "fixtures/platform-validation/inputs/invalid_observed_label_csv.csv": "1113f24ada52507f7a68638b587e56b547b6ff2dd4d20ed4515237a629453b9d",
+    "fixtures/platform-validation/inputs/invalid_string_csv.csv": "f1fd9bb940b799347cb554e497fda2dadc1e3ed0f7d12bf59412d6a158a835bb",
+    "fixtures/platform-validation/inputs/invalid_timestamp_csv.csv": "ceaea2ec982ca538b4cd151578bf385c7f6a10bbd75cee1e650b3381a41313e1",
+    "fixtures/platform-validation/inputs/maturity_inadequate_csv.csv": "d7e0e82fa594aa56cbe0c16c0fdf361635a0fc8879285b43d8e8d1367a11f955",
+    "fixtures/platform-validation/inputs/missing_required_column_csv.csv": "04339663a58e4bb9046e44b1cbabf376b46a8f0f64e75a06eadcdb4e8c479377",
+    "fixtures/platform-validation/inputs/non_monotone_csv.csv": "6dce31bd105ede8430c4910c12f86d177a0f8158a6424c8a653cbaf966b93025",
+    "fixtures/platform-validation/inputs/pan_pattern_csv.csv": "950a676c5eabd58a8058ad56ac876efa3807e8738adb1d3218c0a0a267bf0cc5",
+    "fixtures/platform-validation/inputs/row_limit_metadata_csv.csv": "2677c1956e15e094ef440c61cff5aa85f4e919dae1e6a8e8281fba2903b092c9",
+    "fixtures/platform-validation/inputs/sufficiency_below_guidance_csv.csv": "2677c1956e15e094ef440c61cff5aa85f4e919dae1e6a8e8281fba2903b092c9",
+    "fixtures/platform-validation/inputs/v1_aliases_csv.csv": "a42015fa38c06e3b4c94e95a653e73c53d6d29a8917861796b644023aaa66382",
+    "fixtures/platform-validation/inputs/v1_aliases_parquet.parquet": "4c7c3cda98316419559f15ac1bb0e074ef340969cfee4aecd764c21a3e96f3d4",
+    "fixtures/platform-validation/inputs/vintage_inadequate_csv.csv": "0e106891ec52dbc32595f8adc6d131af8e4002a71009d692d493bc7cc09df28e",
+    "fixtures/platform-validation/manifest.json": "0d0b4d73c3e708557c5b3c82581346ecb7c85e86631a487bf3bf8a5e18dcafc0",
+    "schemas/columns.json": "ba7b5a188d0dbd67991ba6956a2fec153325dfa1405b41ec7b49713e9551708b",
+    "schemas/v1-column-aliases.json": "2a6d8d7c502afeba9109ab72443ca291c6da2e092e264cb90d781947474614a9",
+    "schemas/validation-limits.json": "a79ce891df57c4863275216307bce147defa7363115b5e6107d78b6bf2118e8e",
+    "schemas/validation-report.schema.json": "04d4915da847dfb615f03ffdcc5bc374da2e33e573a40ce114b1e7c92ca68e06"
+  },
+  "fixture_cases": [
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/clean_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/clean_csv.csv",
+      "issue_class": "valid_file",
+      "name": "clean_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/clean_parquet.json",
+      "input_path": "fixtures/platform-validation/inputs/clean_parquet.parquet",
+      "issue_class": "valid_file",
+      "name": "clean_parquet"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/missing_required_column_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/missing_required_column_csv.csv",
+      "issue_class": "missing_required_column",
+      "name": "missing_required_column_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_binary_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/invalid_binary_csv.csv",
+      "issue_class": "invalid_binary",
+      "name": "invalid_binary_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_observed_label_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/invalid_observed_label_csv.csv",
+      "issue_class": "invalid_observed_label",
+      "name": "invalid_observed_label_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_string_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/invalid_string_csv.csv",
+      "issue_class": "invalid_string",
+      "name": "invalid_string_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_timestamp_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/invalid_timestamp_csv.csv",
+      "issue_class": "invalid_timestamp",
+      "name": "invalid_timestamp_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/pan_pattern_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/pan_pattern_csv.csv",
+      "issue_class": "pan_pattern",
+      "name": "pan_pattern_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/v1_aliases_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/v1_aliases_csv.csv",
+      "issue_class": "v1_aliases",
+      "name": "v1_aliases_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/v1_aliases_parquet.json",
+      "input_path": "fixtures/platform-validation/inputs/v1_aliases_parquet.parquet",
+      "issue_class": "v1_aliases",
+      "name": "v1_aliases_parquet"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/after_train_end_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/after_train_end_csv.csv",
+      "issue_class": "after_train_end",
+      "name": "after_train_end_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/non_monotone_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/non_monotone_csv.csv",
+      "issue_class": "non_monotone",
+      "name": "non_monotone_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/row_limit_metadata_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/row_limit_metadata_csv.csv",
+      "issue_class": "row_limit_metadata",
+      "name": "row_limit_metadata_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/column_limit_metadata_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/column_limit_metadata_csv.csv",
+      "issue_class": "column_limit_metadata",
+      "name": "column_limit_metadata_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/file_size_limit_metadata_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/file_size_limit_metadata_csv.csv",
+      "issue_class": "file_size_limit_metadata",
+      "name": "file_size_limit_metadata_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/maturity_inadequate_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/maturity_inadequate_csv.csv",
+      "issue_class": "maturity_inadequate",
+      "name": "maturity_inadequate_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/vintage_inadequate_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/vintage_inadequate_csv.csv",
+      "issue_class": "vintage_inadequate",
+      "name": "vintage_inadequate_csv"
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/sufficiency_below_guidance_csv.json",
+      "input_path": "fixtures/platform-validation/inputs/sufficiency_below_guidance_csv.csv",
+      "issue_class": "sufficiency_below_guidance",
+      "name": "sufficiency_below_guidance_csv"
+    }
+  ],
+  "generated_by": "scripts/export-fhulgor-contract.py",
+  "package": "fhulgor-contract",
+  "public_repo_targets": {
+    "docs": "docs/",
+    "fixtures": "fixtures/platform-validation/",
+    "schemas": "schemas/"
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "packages/engine/src/engine/gates.py": "e42ef888338b23646fe5935d5c0cc0b3efb75f0325e5475d121c84ed94ee4d31",
+    "packages/engine/src/engine/validator.py": "26d62d14eb0bd78f346ba1cc12ab0408bc956c65d1b844f9175db211024c455f",
+    "packages/schemas/src/schemas/artifacts.py": "0be2f0ae4b41d76d1599be29ea7561511f8384a4ca61d457361f3ff38223fd2e",
+    "packages/schemas/src/schemas/columns.py": "c15669b1ed727785be45bd5fbe2492ff3b9f35a8fef9177b69f580ae0e72fb99",
+    "packages/schemas/src/schemas/contract.py": "b9e77e185758531a3eb4f605d93096a421b29811d77b0afab4cb50c682cef085",
+    "packages/schemas/src/schemas/readers.py": "d91d067ab1e027eeed0fc0056672507fed64955cf49c653f818eeead06f81d12",
+    "packages/schemas/src/schemas/serialization.py": "85151e6f8618318ef0d36743af26642fbb2cff822c2a2d3dd8e0a51bef57aaf6",
+    "packages/schemas/src/schemas/version.py": "90b7cb162654f70a2ca7c401ac40fb28f890bbef3869d87deb830fd61a81880b",
+    "scripts/export-fhulgor-contract.py": "375fc18f261eb3279baced1379ba0096dcab87902145d6b960a5ee200bbae914",
+    "scripts/gen-data-contract.py": "31d75ac62a515c086a743e6966325828aa59cdaabbd8844b5ae758013b2dae78"
+  }
+}

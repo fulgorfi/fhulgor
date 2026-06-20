@@ -1,0 +1,6 @@
+{
+  "csv_validation_byte_limit": 500000000,
+  "parquet_validation_byte_limit": 2000000000,
+  "validation_column_limit": 1000,
+  "validation_row_limit": 10000000
+}

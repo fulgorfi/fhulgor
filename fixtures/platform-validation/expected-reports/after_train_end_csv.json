@@ -1,0 +1,107 @@
+{
+  "column_groups": {
+    "A": [
+      "authorized"
+    ],
+    "I": [
+      "issuer_id"
+    ],
+    "R": [
+      "reported"
+    ],
+    "t": [
+      "transaction_time"
+    ],
+    "\u0394": [
+      "available_maturity_days"
+    ],
+    "\u1ef8": [
+      "observed_label"
+    ]
+  },
+  "derived_columns": [
+    "available_maturity_days"
+  ],
+  "errors": [],
+  "prerequisites_verdict": {
+    "backtest": {
+      "gold_present": false,
+      "ignorability_inputs_present": false,
+      "lift_status": "exploratory",
+      "message": "1 rows are exploratory-only for backtest lift because validated-lift prerequisites are missing",
+      "missing_conditions": [
+        "gold_evaluation",
+        "ignorability_inputs"
+      ]
+    },
+    "data_sufficiency": {
+      "message": "n*(epsilon, alpha) guidance not computed: no fitted propensity floors or declared pre-run defaults were supplied",
+      "required_rows": null,
+      "status": "not_computed",
+      "usable_rows": 0
+    },
+    "releases": [
+      {
+        "message": "required columns are present",
+        "missing_requirements": [],
+        "release": "E1-E4",
+        "status": "supported"
+      },
+      {
+        "message": "missing stage-history columns",
+        "missing_requirements": [
+          "w1_* or w2_*"
+        ],
+        "release": "E5",
+        "status": "unsupported"
+      },
+      {
+        "message": "missing dispute-game column prerequisites",
+        "missing_requirements": [
+          "amount",
+          "dispute_filed_time",
+          "dispute_outcome or representment_outcome"
+        ],
+        "release": "E6",
+        "status": "unsupported"
+      },
+      {
+        "message": "missing Class 4 column prerequisites",
+        "missing_requirements": [
+          "merchant_id",
+          "acquirer_id",
+          "merchant_tenure_days",
+          "merchant_monitoring_flag"
+        ],
+        "release": "E7_class4",
+        "status": "unsupported"
+      }
+    ],
+    "supported_engine_releases": [
+      "E1-E4"
+    ]
+  },
+  "row_counts": {
+    "excluded_after_train_end": 1,
+    "excluded_non_monotone": 0,
+    "row_errors": 0,
+    "total": 1,
+    "usable": 0
+  },
+  "schema_version": 2,
+  "valid": true,
+  "warnings": [
+    {
+      "code": "after_train_end",
+      "message": "rows with transaction_time after train_end are excluded",
+      "row_count": 1,
+      "suggested_fix": null
+    },
+    {
+      "code": "ignorability_inputs_missing",
+      "message": "authorization-rule inputs including a schemas-owned live fraud score declaration are absent; backtest lift is exploratory-only",
+      "row_count": 1,
+      "suggested_fix": null
+    }
+  ]
+}

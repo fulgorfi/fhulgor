@@ -1,0 +1,5 @@
+transaction_id,transaction_time,issuer_id,authorized,reported,label_arrival_time,observed_label,amount,three_ds_result,evidence_quality
+tx_0001,2026-01-02T09:15:00Z,iss_a,1,1,2026-01-05T12:00:00Z,1,42.50,pass,strong
+tx_0002,2026-01-02T10:00:00Z,iss_b,true,false,,,113.00,fail,weak
+tx_0003,2026-01-03T08:30:00Z,iss_a,0,0,,,9.99,not_run,none
+tx_0004,2026-01-03T14:45:00Z,iss_c,1,1,2026-01-09T00:00:00Z,0,250.00,pass,medium

@@ -1,0 +1,285 @@
+{
+  "cases": [
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/clean_csv.json",
+      "input_metadata": {
+        "byte_size": 333,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/clean_csv.csv",
+      "issue_class": "valid_file",
+      "name": "clean_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/clean_parquet.json",
+      "input_metadata": {
+        "byte_size": 3823,
+        "column_count": 11,
+        "file_format": "parquet",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/clean_parquet.parquet",
+      "issue_class": "valid_file",
+      "name": "clean_parquet",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/missing_required_column_csv.json",
+      "input_metadata": {
+        "byte_size": 305,
+        "column_count": 10,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/missing_required_column_csv.csv",
+      "issue_class": "missing_required_column",
+      "name": "missing_required_column_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_binary_csv.json",
+      "input_metadata": {
+        "byte_size": 332,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/invalid_binary_csv.csv",
+      "issue_class": "invalid_binary",
+      "name": "invalid_binary_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_observed_label_csv.json",
+      "input_metadata": {
+        "byte_size": 334,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/invalid_observed_label_csv.csv",
+      "issue_class": "invalid_observed_label",
+      "name": "invalid_observed_label_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_string_csv.json",
+      "input_metadata": {
+        "byte_size": 327,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/invalid_string_csv.csv",
+      "issue_class": "invalid_string",
+      "name": "invalid_string_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/invalid_timestamp_csv.json",
+      "input_metadata": {
+        "byte_size": 315,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/invalid_timestamp_csv.csv",
+      "issue_class": "invalid_timestamp",
+      "name": "invalid_timestamp_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/pan_pattern_csv.json",
+      "input_metadata": {
+        "byte_size": 377,
+        "column_count": 12,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/pan_pattern_csv.csv",
+      "issue_class": "pan_pattern",
+      "name": "pan_pattern_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/v1_aliases_csv.json",
+      "input_metadata": {
+        "byte_size": 421,
+        "column_count": 10,
+        "file_format": "csv",
+        "row_count": 4,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/v1_aliases_csv.csv",
+      "issue_class": "v1_aliases",
+      "name": "v1_aliases_csv",
+      "train_end": "2026-02-01T00:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/v1_aliases_parquet.json",
+      "input_metadata": {
+        "byte_size": 4025,
+        "column_count": 10,
+        "file_format": "parquet",
+        "row_count": 4,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/v1_aliases_parquet.parquet",
+      "issue_class": "v1_aliases",
+      "name": "v1_aliases_parquet",
+      "train_end": "2026-02-01T00:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/after_train_end_csv.json",
+      "input_metadata": {
+        "byte_size": 194,
+        "column_count": 7,
+        "file_format": "csv",
+        "row_count": 1,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/after_train_end_csv.csv",
+      "issue_class": "after_train_end",
+      "name": "after_train_end_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/non_monotone_csv.json",
+      "input_metadata": {
+        "byte_size": 167,
+        "column_count": 7,
+        "file_format": "csv",
+        "row_count": 1,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/non_monotone_csv.csv",
+      "issue_class": "non_monotone",
+      "name": "non_monotone_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/row_limit_metadata_csv.json",
+      "input_metadata": {
+        "byte_size": 333,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 10000001,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/row_limit_metadata_csv.csv",
+      "issue_class": "row_limit_metadata",
+      "name": "row_limit_metadata_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/column_limit_metadata_csv.json",
+      "input_metadata": {
+        "byte_size": 333,
+        "column_count": 1001,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/column_limit_metadata_csv.csv",
+      "issue_class": "column_limit_metadata",
+      "name": "column_limit_metadata_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/file_size_limit_metadata_csv.json",
+      "input_metadata": {
+        "byte_size": 500000001,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/file_size_limit_metadata_csv.csv",
+      "issue_class": "file_size_limit_metadata",
+      "name": "file_size_limit_metadata_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": false
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/maturity_inadequate_csv.json",
+      "input_metadata": {
+        "byte_size": 296,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/maturity_inadequate_csv.csv",
+      "issue_class": "maturity_inadequate",
+      "name": "maturity_inadequate_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/vintage_inadequate_csv.json",
+      "input_metadata": {
+        "byte_size": 364,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": null
+      },
+      "input_path": "fixtures/platform-validation/inputs/vintage_inadequate_csv.csv",
+      "issue_class": "vintage_inadequate",
+      "name": "vintage_inadequate_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    },
+    {
+      "expected_report_path": "fixtures/platform-validation/expected-reports/sufficiency_below_guidance_csv.json",
+      "input_metadata": {
+        "byte_size": 333,
+        "column_count": 11,
+        "file_format": "csv",
+        "row_count": 2,
+        "sufficiency_inputs": {
+          "alpha": 0.05,
+          "e_min": 0.5,
+          "epsilon_01": 0.0,
+          "epsilon_10": 0.0,
+          "p_min": 0.5,
+          "r_min": 0.5,
+          "sigma_eff": 1.0,
+          "target_epsilon": 0.01
+        }
+      },
+      "input_path": "fixtures/platform-validation/inputs/sufficiency_below_guidance_csv.csv",
+      "issue_class": "sufficiency_below_guidance",
+      "name": "sufficiency_below_guidance_csv",
+      "train_end": "2026-01-01T12:00:00Z",
+      "valid": true
+    }
+  ],
+  "description": "Public synthetic validation parity corpus generated from engine.validator.validate_frame.",
+  "schema_version": 2
+}

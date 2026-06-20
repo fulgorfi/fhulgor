@@ -1,0 +1,18 @@
+# Build outputs
+target/
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Local fhulgor state and upload artifacts
+.fhulgor-local/
+encoded.fhulgor-work/
+bundle.fhulgor/
+bundle.fhulgor.tar
+encrypted-result.fhulgor/
+
+# Environment files
+.env
+.env.*

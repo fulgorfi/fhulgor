@@ -1,0 +1,338 @@
+{
+  "$defs": {
+    "SuggestedFix": {
+      "additionalProperties": false,
+      "description": "Structured auto-fix suggestion for a fixable validation error (EX-10).\n\nAlways safe JSON \u2014 never executable code with interpolation.",
+      "properties": {
+        "action": {
+          "enum": [
+            "map",
+            "rename",
+            "dropna",
+            "convert"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "column": {
+          "title": "Column",
+          "type": "string"
+        },
+        "mapping": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mapping"
+        },
+        "params": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Params"
+        },
+        "target_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Type"
+        }
+      },
+      "required": [
+        "action",
+        "column"
+      ],
+      "title": "SuggestedFix",
+      "type": "object"
+    },
+    "ValidationBacktestVerdict": {
+      "additionalProperties": false,
+      "description": "Validated-vs-exploratory lift status inputs (spec 07 \u00a74 / SH-04).",
+      "properties": {
+        "gold_present": {
+          "title": "Gold Present",
+          "type": "boolean"
+        },
+        "ignorability_inputs_present": {
+          "title": "Ignorability Inputs Present",
+          "type": "boolean"
+        },
+        "lift_status": {
+          "enum": [
+            "validated",
+            "exploratory"
+          ],
+          "title": "Lift Status",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "missing_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "lift_status",
+        "gold_present",
+        "ignorability_inputs_present",
+        "missing_conditions",
+        "message"
+      ],
+      "title": "ValidationBacktestVerdict",
+      "type": "object"
+    },
+    "ValidationDataSufficiency": {
+      "additionalProperties": false,
+      "description": "Validation-time n*(epsilon, alpha) guidance (spec 02 \u00a79).\n\nThe guidance is non-blocking: absent pre-run defaults or fitted propensity\nfloors, the validator records that the required-row count was not computed\ninstead of inventing inputs.",
+      "properties": {
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "required_rows": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Required Rows"
+        },
+        "status": {
+          "enum": [
+            "sufficient",
+            "insufficient",
+            "not_computed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "usable_rows": {
+          "title": "Usable Rows",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "status",
+        "usable_rows",
+        "required_rows",
+        "message"
+      ],
+      "title": "ValidationDataSufficiency",
+      "type": "object"
+    },
+    "ValidationIssue": {
+      "additionalProperties": false,
+      "description": "One error or warning class with the count of rows it affected (spec 01 \u00a75).",
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "row_count": {
+          "title": "Row Count",
+          "type": "integer"
+        },
+        "suggested_fix": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SuggestedFix"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "row_count"
+      ],
+      "title": "ValidationIssue",
+      "type": "object"
+    },
+    "ValidationPrerequisitesVerdict": {
+      "additionalProperties": false,
+      "description": "Structured prerequisite verdict surfaced by validation (PRD \u00a76.1, B.3).",
+      "properties": {
+        "backtest": {
+          "$ref": "#/$defs/ValidationBacktestVerdict"
+        },
+        "data_sufficiency": {
+          "$ref": "#/$defs/ValidationDataSufficiency"
+        },
+        "releases": {
+          "items": {
+            "$ref": "#/$defs/ValidationReleasePrerequisite"
+          },
+          "title": "Releases",
+          "type": "array"
+        },
+        "supported_engine_releases": {
+          "items": {
+            "enum": [
+              "E1-E4",
+              "E5",
+              "E6",
+              "E7_class4"
+            ],
+            "type": "string"
+          },
+          "title": "Supported Engine Releases",
+          "type": "array"
+        }
+      },
+      "required": [
+        "supported_engine_releases",
+        "releases",
+        "data_sufficiency",
+        "backtest"
+      ],
+      "title": "ValidationPrerequisitesVerdict",
+      "type": "object"
+    },
+    "ValidationReleasePrerequisite": {
+      "additionalProperties": false,
+      "description": "Column prerequisite verdict for one engine release (PRD App. B.3).",
+      "properties": {
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "missing_requirements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Requirements",
+          "type": "array"
+        },
+        "release": {
+          "enum": [
+            "E1-E4",
+            "E5",
+            "E6",
+            "E7_class4"
+          ],
+          "title": "Release",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "unsupported",
+            "undetermined"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "release",
+        "status",
+        "missing_requirements",
+        "message"
+      ],
+      "title": "ValidationReleasePrerequisite",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Structured validation result (spec 01 \u00a75).\n\nNever an exception for data problems \u2014 always this shape. ``column_groups``\nmaps paper-variable symbols (spec 01 \u00a71) to the detected contract columns\n(``X`` maps to several, hence the list value).",
+  "properties": {
+    "column_groups": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Column Groups",
+      "type": "object"
+    },
+    "derived_columns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Derived Columns",
+      "type": "array"
+    },
+    "errors": {
+      "items": {
+        "$ref": "#/$defs/ValidationIssue"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "prerequisites_verdict": {
+      "$ref": "#/$defs/ValidationPrerequisitesVerdict"
+    },
+    "row_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Row Counts",
+      "type": "object"
+    },
+    "schema_version": {
+      "const": 2,
+      "default": 2,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "valid": {
+      "title": "Valid",
+      "type": "boolean"
+    },
+    "warnings": {
+      "items": {
+        "$ref": "#/$defs/ValidationIssue"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "valid",
+    "errors",
+    "warnings",
+    "derived_columns",
+    "row_counts",
+    "column_groups",
+    "prerequisites_verdict"
+  ],
+  "title": "ValidationReport",
+  "type": "object"
+}
